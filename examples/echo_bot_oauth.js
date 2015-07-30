@@ -20,7 +20,7 @@ var cl = new xmpp.Client({
 })
 
 cl.on('online',  function() {
-    var stanza = new xmpp.Element('presence', { })
+    var stanza = new xmpp.Stanza.Element('presence', { })
         .c('show').t('chat').up()
         .c('status').t('Happily echoing your <message/> stanzas')
     cl.send(stanza)
